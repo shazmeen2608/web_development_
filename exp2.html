@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+          }
+          ul.styled-list li a {
+            color: black;
+            text-decoration: none;
+            font-size: 30px;
+
+            font-family: 'Times New Roman', Times, serif;
+          
+          }
+          form input,
+        form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        }
+         button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  
+    </style>
+  <title>Advanced HTML5 and CSS Web Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+ 
+  
+      <ul class="styled-list">
+        <li><a href="#video">Multimedia</a></li>
+        <li><a href="#image">Image</a></li>
+        <li><a href="new.html">Frames</a></li>
+        <li><a href="#form">Form</a></li>
+      </ul>
+  
+  </header>
+
+  <section id="video">
+ 
+    <h2><p>This is the Multimedia Tag to add Video</p></h2>
+    <video controls height="500px" width="500px">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  
+  <section id="image">
+    <h2>Image Tag</h2>
+    <p>Here I Have Added GIF Using Image Tag</p>
+    <img src="gif.gif" alt="Profile Picture">
+  </section>
+
+  <section id="form">
+    <h2>Forms</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+     
+      
+    </form>
+    <label>
+      <input type="radio" name="gender" value="male">
+      Male
+    </label>
+    <label><br>
+      <input type="radio" name="gender" value="female">
+      Female
+    </label><br><br>
+    <label>
+      <input type="checkbox" name="interests" value="music">
+      Music
+    </label><br>
+    <label>
+      <input type="checkbox" name="interests" value="sports">
+      Sports
+    </label><br>
+    <label>
+      <input type="checkbox" name="interests" value="reading">
+      Reading
+    </label><br>
+    <button type="submit">Submit</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 My Cool Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
