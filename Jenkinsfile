@@ -1,11 +1,28 @@
-node {
-  stage('SCM') {
-    checkout scm
-  }
-  stage('SonarQube Analysis') {
-    def scannerHome = tool 'SonarScanner';
-    withSonarQubeEnv() {
-      sh "${scannerHome}/bin/sonar-scanner"
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build App'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test App'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy App'
+            }
+        }
+        
     }
-  }
+    post{
+        
+        always{
+            emailext body: 'Testing CICD', subject: 'Status', to: 'shazmeeen2608@gmail.com'
+        }
+    }
 }
